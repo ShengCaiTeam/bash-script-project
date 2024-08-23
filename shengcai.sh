@@ -596,7 +596,8 @@ reverse_proxy() {
     ip_address
 
     # 下载反向代理配置文件并保存到指定路径
-    wget -O /home/web/conf.d/$yuming.conf https://raw.gitmirror.com/shengcaiteam/sh/main/nginx/reverse-proxy.conf
+    wget -O /home/web/conf.d/$yuming.conf https://gitmirror.com/ShengCaiTeam/sh/raw/main/nginx/reverse-proxy.conf
+
 
     # 替换配置文件中的占位符 yuming.com 为实际的域名 $yuming
     sed -i "s/yuming.com/$yuming/g" /home/web/conf.d/$yuming.conf
@@ -755,7 +756,7 @@ cluster_python3() {
     cd ~/cluster/
 
     # 下载 Python 任务脚本
-    curl -sS -O https://raw.gitmirror.com/shengcaiteam/shengcai.sh/main/python-for-vps/cluster/$py_task
+    curl -sS -O https://gitmirror.com/ShengCaiTeam/sh/raw/main/python-for-vps/cluster/$py_task
 
     # 使用 Python 3 解释器运行下载的 Python 脚本
     python3 ~/cluster/$py_task
